@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="darkmode.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="night">
+    <div class="container">
+      <div class="header">
+        <h1 class="mb-1">Track Your Money</h1>
+        <div class="btn-container">
+          <button><i class="fa-solid fa-sun sun"></i></button>
+          <button><i class="fa-solid fa-moon moon"></i></button>
+        </div>
+      </div>
+      <div class="app-container">
+        <div class="balance-container mb">
+          <h2>Your Balance</h2>
+          <h3 id="show-balance">5,000 Birr</h3>
+        </div>
+
+        <div class="income-expense-container mb">
+          <div class="income-container">
+            <h2>Income</h2>
+            <h3 id="show-income">100,000 Birr</h3>
+          </div>
+
+          <div class="expense-container">
+            <h2>Expense</h2>
+            <h3 id="show-expense">35,000Birr</h3>
+          </div>
+        </div>
+
+        <div class="input-container mb">
+          <div class="discription-container mb-1">
+            <input
+              type="text"
+              placeholder="Description"
+              id="description-input"
+              required
+            />
+            <input
+              type="number"
+              placeholder="Amount"
+              id="amount-input"
+              required
+            />
+          </div>
+
+          <div class="expense-type-container mb-1">
+            <div class="input-control">
+              <input type="radio" name="expense" id="income" checked />
+              <label for="income">Income</label>
+            </div>
+
+            <div class="input-control">
+              <input type="radio" name="expense" id="expense" />
+              <label for="expense">Expense</label>
+            </div>
+          </div>
+          <button id="add-btn">Add Transaction</button>
+        </div>
+
+        <div class="transaction-container">
+          <h2 class="mb-1">Recent Transactions</h2>
+          <div class="transaction-lists">
+            <ul id="transactionHistory"></ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="pop-up-container" class="pop-up">
+        <h4 id="pop-up">Transaction has been Added!</h4>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

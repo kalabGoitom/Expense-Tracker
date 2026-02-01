@@ -1,0 +1,60 @@
+body.night {
+  /* background-color: rgb(28, 28, 28); */
+  background: linear-gradient(135deg, #161616, #010412);
+  background-repeat: no-repeat;
+}
+
+body.night h1,
+body.night h2,
+body.night h3,
+body.night label {
+  color: #f3f3f3;
+}
+
+body.night .container {
+  background-color: #010412;
+  box-shadow: 2px 2px 20px rgba(33, 33, 33, 0.1);
+}
+
+body.night .balance-container {
+  background: linear-gradient(135deg, #241e30, #243b55);
+}
+
+body.night .input-container .discription-container input {
+  border: 1px solid #fff;
+  background: transparent;
+  color: #ffff;
+}
+
+body.night .input-container .discription-container input:focus {
+  border: 2px solid #fff;
+}
+
+body.night .input-container .expense-type-container .input-control label {
+  color: #f3f3f3;
+}
+
+body.night #add-btn {
+  background: linear-gradient(135deg, #241e30, #243b55);
+  color: #f3f3f3;
+}
+
+body.night #add-btn:hover {
+  background: linear-gradient(-135deg, #241e30, #243b55);
+}
+
+body.night .pop-up {
+  color: #f3f3f3;
+}
+
+body.night .header button {
+  color: #f3f3f3;
+}
+
+body.night .fa-moon {
+  display: none;
+}
+
+body.night .fa-sun {
+  display: block;
+}
