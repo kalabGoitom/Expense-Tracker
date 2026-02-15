@@ -34,4 +34,4 @@ The app allows users to track income and expenses, view their balance in real ti
 ## How to Run
 1. Clone the repository  
 ```bash
-git clone https://github.com/your-kalabGoitom/expense-tracker.git
+git clone https://github.com/kalabGoitom/expense-tracker.git
