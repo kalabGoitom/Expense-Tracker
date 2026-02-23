@@ -1,0 +1,44 @@
+# Vercel Web Analytics Implementation Report
+
+## Summary
+Successfully implemented Vercel Web Analytics for the expense tracker HTML application.
+
+## Changes Made
+
+### Modified Files
+- **index.html** - Added Vercel Web Analytics tracking script
+
+## Implementation Details
+
+Since this is a plain HTML project (no build system or JavaScript framework), I followed the HTML-specific instructions from the Vercel Web Analytics guide:
+
+1. Added the initialization script that creates the `window.va` function
+2. Added the deferred loading script that loads from `/_vercel/insights/script.js`
+
+The scripts were added in the `<head>` section, right before the closing `</head>` tag, which ensures they load with the page but don't block rendering.
+
+### Code Added
+```html
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+```
+
+## Notes
+
+- No package installation required for plain HTML implementation
+- The analytics will automatically start tracking visitors and page views once deployed to Vercel
+- The `/_vercel/insights/view` endpoint will be available after deployment to Vercel
+- No route support is available with the HTML implementation (as noted in the guide)
+- To verify the implementation is working, check the browser's Network tab for a Fetch/XHR request to `/_vercel/insights/view` after deployment
+
+## Next Steps for the User
+
+1. Deploy the app to Vercel using `vercel deploy` or by connecting the Git repository
+2. Enable Web Analytics in the Vercel dashboard (Project → Analytics tab → Enable)
+3. Once deployed and users visit the site, view analytics data in the Vercel dashboard
+4. Optionally, explore custom events for tracking specific user interactions (requires Pro or Enterprise plan)
+
+## Important
+The analytics tracking will only work when the app is deployed to Vercel. Local development will not send analytics data (or will send to development mode if configured).
